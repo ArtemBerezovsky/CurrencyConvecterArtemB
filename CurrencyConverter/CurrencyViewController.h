@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CurrencyViewController.h
 //  CurrencyConverter
 //
 //  Created by ENGLISH on 10/30/16.
@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewController.h"
 
-@interface ViewController : UIViewController
+@interface CurrencyViewController : UIViewController
 
 
 @end
+
+
+
+
+
+
+
 

@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "CurrencyViewController.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,6 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    CurrencyViewController *mainVC = [[CurrencyViewController alloc] initWithNibName: nil bundle: nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    navigationController.navigationBar.translucent = NO;
+    
+    
+    window.rootViewController = navigationController;
+    [window makeKeyAndVisible];
+    self.window = window;
+
     return YES;
 }
 

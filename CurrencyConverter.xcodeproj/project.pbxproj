@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FEC43331DCDCF920020FBDB /* CurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC43321DCDCF920020FBDB /* CurrencyViewController.xib */; };
+		3FEC43411DCDECC70020FBDB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC433F1DCDECC70020FBDB /* TableViewController.m */; };
+		3FEC43421DCDECC70020FBDB /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC43401DCDECC70020FBDB /* TableViewController.xib */; };
+		5D90EADE1DCD4F7000323819 /* MyUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D90EADD1DCD4F7000323819 /* MyUITextField.m */; };
 		5DE6F8491DC65AD1001DC7A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F8481DC65AD1001DC7A5 /* main.m */; };
 		5DE6F84C1DC65AD1001DC7A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F84B1DC65AD1001DC7A5 /* AppDelegate.m */; };
-		5DE6F84F1DC65AD1001DC7A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F84E1DC65AD1001DC7A5 /* ViewController.m */; };
-		5DE6F8521DC65AD1001DC7A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE6F8501DC65AD1001DC7A5 /* Main.storyboard */; };
 		5DE6F8541DC65AD1001DC7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE6F8531DC65AD1001DC7A5 /* Assets.xcassets */; };
 		5DE6F8571DC65AD1001DC7A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE6F8551DC65AD1001DC7A5 /* LaunchScreen.storyboard */; };
 		5DE6F8621DC65AD2001DC7A5 /* CurrencyConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F8611DC65AD2001DC7A5 /* CurrencyConverterTests.m */; };
 		5DE6F86D1DC65AD2001DC7A5 /* CurrencyConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F86C1DC65AD2001DC7A5 /* CurrencyConverterUITests.m */; };
+		5DE6F87C1DC65B8F001DC7A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE6F87B1DC65B8F001DC7A5 /* UIKit.framework */; };
+		5DE6F8801DC65FF5001DC7A5 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FEC43321DCDCF920020FBDB /* CurrencyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyViewController.xib; sourceTree = "<group>"; };
+		3FEC433E1DCDECC70020FBDB /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		3FEC433F1DCDECC70020FBDB /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		3FEC43401DCDECC70020FBDB /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		5D90EADC1DCD4F7000323819 /* MyUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUITextField.h; sourceTree = "<group>"; };
+		5D90EADD1DCD4F7000323819 /* MyUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUITextField.m; sourceTree = "<group>"; };
 		5DE6F8441DC65AD1001DC7A5 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE6F8481DC65AD1001DC7A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DE6F84A1DC65AD1001DC7A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DE6F84B1DC65AD1001DC7A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5DE6F84D1DC65AD1001DC7A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5DE6F84E1DC65AD1001DC7A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5DE6F8511DC65AD1001DC7A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DE6F8531DC65AD1001DC7A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DE6F8561DC65AD1001DC7A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DE6F8581DC65AD1001DC7A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +58,10 @@
 		5DE6F8681DC65AD2001DC7A5 /* CurrencyConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE6F86C1DC65AD2001DC7A5 /* CurrencyConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyConverterUITests.m; sourceTree = "<group>"; };
 		5DE6F86E1DC65AD2001DC7A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DE6F87B1DC65B8F001DC7A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5DE6F87E1DC65FF5001DC7A5 /* CurrencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyViewController.h; sourceTree = "<group>"; };
+		5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyViewController.m; sourceTree = "<group>"; };
+		5DEDDEC21DCFAEEB005E2A02 /* MyTableViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewControllerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE6F87C1DC65B8F001DC7A5 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,7 @@
 				5DE6F8601DC65AD2001DC7A5 /* CurrencyConverterTests */,
 				5DE6F86B1DC65AD2001DC7A5 /* CurrencyConverterUITests */,
 				5DE6F8451DC65AD1001DC7A5 /* Products */,
+				5DE6F87A1DC65B8F001DC7A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +114,9 @@
 		5DE6F8461DC65AD1001DC7A5 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				5DE6F87D1DC65FB6001DC7A5 /* UI */,
 				5DE6F84A1DC65AD1001DC7A5 /* AppDelegate.h */,
 				5DE6F84B1DC65AD1001DC7A5 /* AppDelegate.m */,
-				5DE6F84D1DC65AD1001DC7A5 /* ViewController.h */,
-				5DE6F84E1DC65AD1001DC7A5 /* ViewController.m */,
-				5DE6F8501DC65AD1001DC7A5 /* Main.storyboard */,
 				5DE6F8531DC65AD1001DC7A5 /* Assets.xcassets */,
 				5DE6F8551DC65AD1001DC7A5 /* LaunchScreen.storyboard */,
 				5DE6F8581DC65AD1001DC7A5 /* Info.plist */,
@@ -138,6 +149,30 @@
 				5DE6F86E1DC65AD2001DC7A5 /* Info.plist */,
 			);
 			path = CurrencyConverterUITests;
+			sourceTree = "<group>";
+		};
+		5DE6F87A1DC65B8F001DC7A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DE6F87B1DC65B8F001DC7A5 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DE6F87D1DC65FB6001DC7A5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5DE6F87E1DC65FF5001DC7A5 /* CurrencyViewController.h */,
+				5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */,
+				3FEC43321DCDCF920020FBDB /* CurrencyViewController.xib */,
+				3FEC433E1DCDECC70020FBDB /* TableViewController.h */,
+				3FEC433F1DCDECC70020FBDB /* TableViewController.m */,
+				3FEC43401DCDECC70020FBDB /* TableViewController.xib */,
+				5DEDDEC21DCFAEEB005E2A02 /* MyTableViewControllerProtocol.h */,
+				5D90EADC1DCD4F7000323819 /* MyUITextField.h */,
+				5D90EADD1DCD4F7000323819 /* MyUITextField.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +283,8 @@
 			files = (
 				5DE6F8571DC65AD1001DC7A5 /* LaunchScreen.storyboard in Resources */,
 				5DE6F8541DC65AD1001DC7A5 /* Assets.xcassets in Resources */,
-				5DE6F8521DC65AD1001DC7A5 /* Main.storyboard in Resources */,
+				3FEC43331DCDCF920020FBDB /* CurrencyViewController.xib in Resources */,
+				3FEC43421DCDECC70020FBDB /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DE6F84F1DC65AD1001DC7A5 /* ViewController.m in Sources */,
 				5DE6F84C1DC65AD1001DC7A5 /* AppDelegate.m in Sources */,
+				3FEC43411DCDECC70020FBDB /* TableViewController.m in Sources */,
+				5DE6F8801DC65FF5001DC7A5 /* CurrencyViewController.m in Sources */,
 				5DE6F8491DC65AD1001DC7A5 /* main.m in Sources */,
+				5D90EADE1DCD4F7000323819 /* MyUITextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5DE6F8501DC65AD1001DC7A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DE6F8511DC65AD1001DC7A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5DE6F8551DC65AD1001DC7A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -425,9 +455,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AB.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,9 +468,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AB.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -507,6 +541,7 @@
 				5DE6F8731DC65AD2001DC7A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DE6F8741DC65AD2001DC7A5 /* Build configuration list for PBXNativeTarget "CurrencyConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +550,7 @@
 				5DE6F8761DC65AD2001DC7A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DE6F8771DC65AD2001DC7A5 /* Build configuration list for PBXNativeTarget "CurrencyConverterUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +559,7 @@
 				5DE6F8791DC65AD2001DC7A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
