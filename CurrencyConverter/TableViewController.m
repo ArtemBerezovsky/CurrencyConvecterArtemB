@@ -26,17 +26,8 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    self.doneButton = [[UIBarButtonItem alloc] initWithTitle: @"Done"
-                                                       style: UIBarButtonItemStylePlain
-                                                      target: self
-                                                      action: @selector (doneButtonClicked)];
-    [self.navigationController.navigationItem setRightBarButtonItem: self.doneButton];
-    UIButton *buttonTest = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 100, 100)];
-    [buttonTest setBackgroundColor: [UIColor redColor]];
-    [buttonTest addTarget: self
-                   action: @selector(doneButtonClicked)
-         forControlEvents: UIControlEventTouchUpInside];
-    [self.view addSubview: buttonTest];
+    [self initNavigationItemRightBarButtonItem];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,12 +36,21 @@
 }
 
 #pragma mark - myMetods
--(void) doneButtonClicked {
+
+- (void) doneButtonClicked
+{
     [self.delegate didChangeCurrency: self.selectedCurrencyNumber];
     [self.navigationController popViewControllerAnimated: YES];
 }
 
-
+- (void) initNavigationItemRightBarButtonItem
+{
+    self.doneButton = [[UIBarButtonItem alloc] initWithTitle: @"Done"
+                                                       style: UIBarButtonItemStyleDone
+                                                      target: self
+                                                      action: @selector (doneButtonClicked)];
+    self.navigationItem.rightBarButtonItem = self.doneButton;
+}
 
 /*
 #pragma mark - Navigation
