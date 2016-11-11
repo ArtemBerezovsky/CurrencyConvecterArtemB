@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "MyTableViewControllerProtocol.h"
 
 @interface TableViewController ()
 
@@ -37,11 +38,6 @@
 
 #pragma mark - myMetods
 
-- (void) doneButtonClicked
-{
-    [self.delegate didChangeCurrency: self.selectedCurrencyNumber];
-    [self.navigationController popViewControllerAnimated: YES];
-}
 
 - (void) initNavigationItemRightBarButtonItem
 {
@@ -52,6 +48,12 @@
     self.navigationItem.rightBarButtonItem = self.doneButton;
 }
 
+- (void) doneButtonClicked
+{
+    [self.delegate CloseVC];
+    [self.delegate didChangeCurrency: self.selectedCurrencyNumber];
+    
+}
 /*
 #pragma mark - Navigation
 

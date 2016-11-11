@@ -7,7 +7,7 @@
 //
 
 #import "CurrencyViewController.h"
-
+#import "MyTableViewControllerProtocol.h"
 
 #pragma mark - constants
 
@@ -15,7 +15,6 @@ static const float kRate = 62.5f;
 static NSString *kRUB = @"RUB";
 static NSString *kUSD = @"USD";
 static NSString *kValueDefault = @"0";
-//text
 
 
 @interface CurrencyViewController () <UITextFieldDelegate, MyTableViewControllerProtocol>
@@ -37,7 +36,7 @@ static NSString *kValueDefault = @"0";
     self.rubIsLeft = YES;
     self.title = @"Обмен Валюты";
     self.valueTextField.delegate = self;
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +51,7 @@ static NSString *kValueDefault = @"0";
 {
     TableViewController *tablerate;
     tablerate = [[TableViewController alloc] initWithNibName: nil bundle: nil];
+    tablerate.delegate = self;
     [self.navigationController pushViewController: tablerate animated: YES];
 }
 
@@ -103,7 +103,7 @@ static NSString *kValueDefault = @"0";
 
 #pragma mark - MyTableViewControllerProtocol
 
--(void) didChangeCurrency: (NSNumber *) selectedCurrency
+- (void) didChangeCurrency: (NSNumber *) selectedCurrency
 {
     switch (selectedCurrency.integerValue)
     {
@@ -122,6 +122,11 @@ static NSString *kValueDefault = @"0";
     }
 }
 
+
+- (void) CloseVC
+{
+    [self.navigationController popViewControllerAnimated: YES];
+}
 #pragma mark - delegateMetods
 
 - (BOOL) textField: (UITextField *)textField
@@ -154,26 +159,31 @@ shouldChangeCharactersInRange: (NSRange)range
     if([textField.text length] > 0 && [string isEqualToString: @""]){
         NSNumber *inputValue = [self conversion: [textField.text substringToIndex: [textField.text length]-1]];
         float result;
-        if (self.rubIsLeft == YES) {
+        if (self.rubIsLeft == YES)
+        {
             result = inputValue.floatValue / kRate;
             
         }
-        else {
+        else
+        {
             result = inputValue.floatValue * kRate;
         }
         NSNumber *resultNumber = [NSNumber numberWithFloat: result];
         self.resultLabel.text = [resultNumber stringValue];
         return YES;
     }
-    else {
+    else
+    {
         
         NSNumber *inputValue = [self conversion: [textField.text stringByAppendingString: string]];
         float result;
-        if (self.rubIsLeft == YES) {
+        if (self.rubIsLeft == YES)
+        {
             result = inputValue.floatValue / kRate;
             
         }
-        else {
+        else
+        {
             result = inputValue.floatValue * kRate;
         }
         NSNumber *resultNumber = [NSNumber numberWithFloat: result];

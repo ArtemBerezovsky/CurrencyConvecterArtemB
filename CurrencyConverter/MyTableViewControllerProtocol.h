@@ -10,9 +10,14 @@
 
 @protocol MyTableViewControllerProtocol <NSObject>
 
+
 @required
 
 -(void) didChangeCurrency: (NSNumber *) selectedCurrency;
+-(void) CloseVC;
+
+
+
 
 
 @end

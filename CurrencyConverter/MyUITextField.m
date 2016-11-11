@@ -10,7 +10,8 @@
 
 @implementation MyUITextField
 
--(BOOL) canPerformAction:(SEL)action withSender:(id)sender {
+-(BOOL) canPerformAction:(SEL)action withSender:(id)sender
+{
     if (action == @selector(paste:))
         return NO;
     if (action == @selector(select:))
