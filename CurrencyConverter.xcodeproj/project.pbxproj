@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5A9F761DEC568A00374A0E /* ApiConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A9F751DEC568A00374A0E /* ApiConfig.m */; };
+		3F5A9F791DEC5C4400374A0E /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A9F781DEC5C4400374A0E /* AppContext.m */; };
 		3FEC43331DCDCF920020FBDB /* CurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC43321DCDCF920020FBDB /* CurrencyViewController.xib */; };
 		3FEC43411DCDECC70020FBDB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC433F1DCDECC70020FBDB /* TableViewController.m */; };
 		3FEC43421DCDECC70020FBDB /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC43401DCDECC70020FBDB /* TableViewController.xib */; };
+		5D0AD2E71DD9277800A55AC3 /* CurrencyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0AD2E61DD9277800A55AC3 /* CurrencyModel.m */; };
+		5D0AD2EA1DD92D9800A55AC3 /* CurrencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0AD2E91DD92D9800A55AC3 /* CurrencyManager.m */; };
+		5D0AD2ED1DD9363200A55AC3 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0AD2EC1DD9363200A55AC3 /* DataSource.m */; };
+		5D5070DB1DDE622300395B09 /* RootWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5070DA1DDE622300395B09 /* RootWindow.m */; };
 		5D90EADE1DCD4F7000323819 /* MyUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D90EADD1DCD4F7000323819 /* MyUITextField.m */; };
 		5DE6F8491DC65AD1001DC7A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F8481DC65AD1001DC7A5 /* main.m */; };
 		5DE6F84C1DC65AD1001DC7A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F84B1DC65AD1001DC7A5 /* AppDelegate.m */; };
@@ -19,6 +25,11 @@
 		5DE6F86D1DC65AD2001DC7A5 /* CurrencyConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F86C1DC65AD2001DC7A5 /* CurrencyConverterUITests.m */; };
 		5DE6F87C1DC65B8F001DC7A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE6F87B1DC65B8F001DC7A5 /* UIKit.framework */; };
 		5DE6F8801DC65FF5001DC7A5 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */; };
+		8432D78C1DF45BA600A24245 /* HIstoryCurrencyRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D78A1DF45BA500A24245 /* HIstoryCurrencyRates.m */; };
+		8432D78D1DF45BA600A24245 /* HIstoryCurrencyRates.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8432D78B1DF45BA500A24245 /* HIstoryCurrencyRates.xib */; };
+		8432D7901DF4607500A24245 /* HystoryCurrencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D78F1DF4607500A24245 /* HystoryCurrencyManager.m */; };
+		84404AAB1DEDAA6D002A6A07 /* ApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84404AAA1DEDAA6D002A6A07 /* ApiHelper.m */; };
+		84404AAD1DEDAC4A002A6A07 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84404AAC1DEDAC4A002A6A07 /* config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +50,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5A9F741DEC568A00374A0E /* ApiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiConfig.h; path = Config/ApiConfig.h; sourceTree = "<group>"; };
+		3F5A9F751DEC568A00374A0E /* ApiConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApiConfig.m; path = Config/ApiConfig.m; sourceTree = "<group>"; };
+		3F5A9F771DEC5C4400374A0E /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
+		3F5A9F781DEC5C4400374A0E /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
 		3FEC43321DCDCF920020FBDB /* CurrencyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyViewController.xib; sourceTree = "<group>"; };
 		3FEC433E1DCDECC70020FBDB /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		3FEC433F1DCDECC70020FBDB /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		3FEC43401DCDECC70020FBDB /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		5D0AD2E51DD9277800A55AC3 /* CurrencyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyModel.h; path = models/CurrencyModel.h; sourceTree = "<group>"; };
+		5D0AD2E61DD9277800A55AC3 /* CurrencyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyModel.m; path = models/CurrencyModel.m; sourceTree = "<group>"; };
+		5D0AD2E81DD92D9800A55AC3 /* CurrencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyManager.h; path = Manager/CurrencyManager.h; sourceTree = "<group>"; };
+		5D0AD2E91DD92D9800A55AC3 /* CurrencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyManager.m; path = Manager/CurrencyManager.m; sourceTree = "<group>"; };
+		5D0AD2EB1DD9363200A55AC3 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		5D0AD2EC1DD9363200A55AC3 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		5D5070D91DDE622300395B09 /* RootWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootWindow.h; path = RootWindow/RootWindow.h; sourceTree = "<group>"; };
+		5D5070DA1DDE622300395B09 /* RootWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootWindow.m; path = RootWindow/RootWindow.m; sourceTree = "<group>"; };
 		5D90EADC1DCD4F7000323819 /* MyUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUITextField.h; sourceTree = "<group>"; };
 		5D90EADD1DCD4F7000323819 /* MyUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUITextField.m; sourceTree = "<group>"; };
 		5DE6F8441DC65AD1001DC7A5 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +85,14 @@
 		5DE6F87E1DC65FF5001DC7A5 /* CurrencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyViewController.h; sourceTree = "<group>"; };
 		5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyViewController.m; sourceTree = "<group>"; };
 		5DEDDEC21DCFAEEB005E2A02 /* MyTableViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewControllerProtocol.h; sourceTree = "<group>"; };
+		8432D7891DF45BA500A24245 /* HIstoryCurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIstoryCurrencyRates.h; sourceTree = "<group>"; };
+		8432D78A1DF45BA500A24245 /* HIstoryCurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIstoryCurrencyRates.m; sourceTree = "<group>"; };
+		8432D78B1DF45BA500A24245 /* HIstoryCurrencyRates.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIstoryCurrencyRates.xib; sourceTree = "<group>"; };
+		8432D78E1DF4607500A24245 /* HystoryCurrencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HystoryCurrencyManager.h; sourceTree = "<group>"; };
+		8432D78F1DF4607500A24245 /* HystoryCurrencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HystoryCurrencyManager.m; sourceTree = "<group>"; };
+		84404AA91DEDAA6D002A6A07 /* ApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiHelper.h; sourceTree = "<group>"; };
+		84404AAA1DEDAA6D002A6A07 /* ApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiHelper.m; sourceTree = "<group>"; };
+		84404AAC1DEDAC4A002A6A07 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +121,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F5A9F731DEC565300374A0E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3F5A9F741DEC568A00374A0E /* ApiConfig.h */,
+				3F5A9F751DEC568A00374A0E /* ApiConfig.m */,
+				84404AAC1DEDAC4A002A6A07 /* config.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		5D0AD2E41DD9208A00A55AC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D0AD2E51DD9277800A55AC3 /* CurrencyModel.h */,
+				5D0AD2E61DD9277800A55AC3 /* CurrencyModel.m */,
+				8432D78E1DF4607500A24245 /* HystoryCurrencyManager.h */,
+				8432D78F1DF4607500A24245 /* HystoryCurrencyManager.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5DD338E21DE62F0000998202 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				84404AA91DEDAA6D002A6A07 /* ApiHelper.h */,
+				84404AAA1DEDAA6D002A6A07 /* ApiHelper.m */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
 		5DE6F83B1DC65AD1001DC7A5 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +175,16 @@
 		5DE6F8461DC65AD1001DC7A5 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				3F5A9F731DEC565300374A0E /* Config */,
+				5D0AD2E41DD9208A00A55AC3 /* Models */,
+				5DD338E21DE62F0000998202 /* network */,
 				5DE6F87D1DC65FB6001DC7A5 /* UI */,
 				5DE6F84A1DC65AD1001DC7A5 /* AppDelegate.h */,
 				5DE6F84B1DC65AD1001DC7A5 /* AppDelegate.m */,
+				5D5070D91DDE622300395B09 /* RootWindow.h */,
+				5D5070DA1DDE622300395B09 /* RootWindow.m */,
+				3F5A9F771DEC5C4400374A0E /* AppContext.h */,
+				3F5A9F781DEC5C4400374A0E /* AppContext.m */,
 				5DE6F8531DC65AD1001DC7A5 /* Assets.xcassets */,
 				5DE6F8551DC65AD1001DC7A5 /* LaunchScreen.storyboard */,
 				5DE6F8581DC65AD1001DC7A5 /* Info.plist */,
@@ -168,7 +236,14 @@
 				3FEC433E1DCDECC70020FBDB /* TableViewController.h */,
 				3FEC433F1DCDECC70020FBDB /* TableViewController.m */,
 				3FEC43401DCDECC70020FBDB /* TableViewController.xib */,
+				8432D7891DF45BA500A24245 /* HIstoryCurrencyRates.h */,
+				8432D78A1DF45BA500A24245 /* HIstoryCurrencyRates.m */,
+				8432D78B1DF45BA500A24245 /* HIstoryCurrencyRates.xib */,
 				5DEDDEC21DCFAEEB005E2A02 /* MyTableViewControllerProtocol.h */,
+				5D0AD2E81DD92D9800A55AC3 /* CurrencyManager.h */,
+				5D0AD2E91DD92D9800A55AC3 /* CurrencyManager.m */,
+				5D0AD2EB1DD9363200A55AC3 /* DataSource.h */,
+				5D0AD2EC1DD9363200A55AC3 /* DataSource.m */,
 				5D90EADC1DCD4F7000323819 /* MyUITextField.h */,
 				5D90EADD1DCD4F7000323819 /* MyUITextField.m */,
 			);
@@ -282,7 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE6F8571DC65AD1001DC7A5 /* LaunchScreen.storyboard in Resources */,
+				84404AAD1DEDAC4A002A6A07 /* config.plist in Resources */,
 				5DE6F8541DC65AD1001DC7A5 /* Assets.xcassets in Resources */,
+				8432D78D1DF45BA600A24245 /* HIstoryCurrencyRates.xib in Resources */,
 				3FEC43331DCDCF920020FBDB /* CurrencyViewController.xib in Resources */,
 				3FEC43421DCDECC70020FBDB /* TableViewController.xib in Resources */,
 			);
@@ -309,11 +386,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5A9F761DEC568A00374A0E /* ApiConfig.m in Sources */,
+				8432D78C1DF45BA600A24245 /* HIstoryCurrencyRates.m in Sources */,
 				5DE6F84C1DC65AD1001DC7A5 /* AppDelegate.m in Sources */,
 				3FEC43411DCDECC70020FBDB /* TableViewController.m in Sources */,
+				84404AAB1DEDAA6D002A6A07 /* ApiHelper.m in Sources */,
+				5D0AD2ED1DD9363200A55AC3 /* DataSource.m in Sources */,
+				3F5A9F791DEC5C4400374A0E /* AppContext.m in Sources */,
+				5D0AD2E71DD9277800A55AC3 /* CurrencyModel.m in Sources */,
 				5DE6F8801DC65FF5001DC7A5 /* CurrencyViewController.m in Sources */,
 				5DE6F8491DC65AD1001DC7A5 /* main.m in Sources */,
+				5D5070DB1DDE622300395B09 /* RootWindow.m in Sources */,
+				8432D7901DF4607500A24245 /* HystoryCurrencyManager.m in Sources */,
 				5D90EADE1DCD4F7000323819 /* MyUITextField.m in Sources */,
+				5D0AD2EA1DD92D9800A55AC3 /* CurrencyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

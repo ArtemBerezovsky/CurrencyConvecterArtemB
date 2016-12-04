@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>nameBaseCurrency</key>
+	<string>Российский рубль</string>
+	<key>codeBaseCurrency</key>
+	<string>RUB</string>
+	<key>queryItemsBase</key>
+	<string>base</string>
+	<key>latestMethod</key>
+	<string>/latest</string>
+	<key>BaseURL</key>
+	<string>http://api.fixer.io</string>
+	<key>symbolsMethod</key>
+	<string>symbols</string>
+</dict>
+</plist>

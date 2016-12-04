@@ -8,16 +8,20 @@
 
 #import "CurrencyViewController.h"
 #import "MyTableViewControllerProtocol.h"
+#import "AppContext.h"
+
 
 #pragma mark - constants
 
-static const float kRate = 62.5f;
-static NSString *kRUB = @"RUB";
-static NSString *kUSD = @"USD";
+
+
+
 static NSString *kValueDefault = @"0";
+static NSString *const valueForTransferRate = @"1";
 
 
-@interface CurrencyViewController () <UITextFieldDelegate, MyTableViewControllerProtocol>
+
+@interface CurrencyViewController () <UITextFieldDelegate, MyTableViewControllerProtocol >
 
 @property (weak, nonatomic) IBOutlet UILabel *leftCurrency;
 @property (weak, nonatomic) IBOutlet UILabel *rightCurrency;
@@ -25,17 +29,26 @@ static NSString *kValueDefault = @"0";
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (assign, nonatomic) BOOL lastDot;
 @property (assign, nonatomic) BOOL rubIsLeft;
+@property (weak, nonatomic) IBOutlet UILabel *exchangeRateLabel;
 
 @end
 
 @implementation CurrencyViewController
-
+{
+    NSNumber *exchangeRate;
+    NSDecimalNumber *rateDecimal;
+    NSDecimalNumber *resultDecimal;
+    NSDecimalNumberHandler *behavior;
+    NSDecimalNumber *inputValueDecimal;
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.rubIsLeft = YES;
     self.title = @"Обмен Валюты";
     self.valueTextField.delegate = self;
+    
 
 }
 
@@ -55,23 +68,7 @@ static NSString *kValueDefault = @"0";
     [self.navigationController pushViewController: tablerate animated: YES];
 }
 
-- (IBAction) calculateButtonClicked: (UIButton *) sender
-{
-    NSNumber *inputValue = [self conversion: self.valueTextField.text];
-    float result;
-    if (self.rubIsLeft == YES)
-    {
-        result = inputValue.floatValue / kRate;
-        
-    }
-    else
-    {
-        result = inputValue.floatValue * kRate;
-    }
-    NSNumber *resultNumber = [NSNumber numberWithFloat: result];
-    self.resultLabel.text = [resultNumber stringValue];
-    
-}
+
 
 - (IBAction) changeButtonClicked: (UIButton *) sender
 {
@@ -81,13 +78,11 @@ static NSString *kValueDefault = @"0";
     {
         self.leftCurrency.text = kRUB;
         self.rightCurrency.text = kUSD;
-        [self calculateButtonClicked: nil];
     }
     else
     {
         self.leftCurrency.text = kUSD;
         self.rightCurrency.text = kRUB;
-        [self calculateButtonClicked: nil];
     }
 }
 
@@ -103,30 +98,92 @@ static NSString *kValueDefault = @"0";
 
 #pragma mark - MyTableViewControllerProtocol
 
-- (void) didChangeCurrency: (NSNumber *) selectedCurrency
-{
-    switch (selectedCurrency.integerValue)
-    {
-        case 0:
-            self.leftCurrency.text = kRUB;
-            self.rightCurrency.text = kUSD;
-            break;
-            
-        case 1:
-            self.leftCurrency.text = kUSD;
-            self.rightCurrency.text = kRUB;
-            
-        default:
-            NSLog(@"Incorrect  Value: %ld", (long)selectedCurrency.integerValue);
-            break;
-    }
-}
-
-
-- (void) CloseVC
+- (void) didChangeCurrency: (NSString *) selectedCurrency
 {
     [self.navigationController popViewControllerAnimated: YES];
+    self.rightCurrency.text = selectedCurrency;
+    typeof(self) __weak weakSelf = self;
+
+
+    [ [AppContext sharedAppContext].apiHelper  loadAllRatesWithResponseHandler: ^(NSDictionary * _Nonnull dict)
+                                            {
+                                                [weakSelf updateRate:dict
+                                                    selectedCurrency: selectedCurrency];
+                                            }
+                               withFailureHandler: ^(NSError * _Nonnull error)
+                                            {
+                                                dispatch_async(dispatch_get_main_queue(), ^{
+                                                    [weakSelf handleError:error];
+                                                });
+                                            }];
+   
+
+  
 }
+
+
+- (void)updateRate:(NSDictionary *)dict
+ selectedCurrency :(NSString *) selectedCurrency
+{
+    NSNumber *rate = dict[selectedCurrency];
+    exchangeRate = rate;
+    NSDecimalNumber *exchangeRateDecimal = [NSDecimalNumber decimalNumberWithDecimal:[exchangeRate decimalValue]];
+    NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:valueForTransferRate];
+    behavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain
+                                                                                              scale:2
+                                                                                   raiseOnExactness:NO
+                                                                                    raiseOnOverflow:NO
+                                                                                   raiseOnUnderflow:NO
+                                                                                raiseOnDivideByZero:NO];
+    rateDecimal = [value decimalNumberByDividingBy:exchangeRateDecimal];
+    NSDecimalNumber *rateDecimalScale2 = [value decimalNumberByDividingBy:exchangeRateDecimal
+                                                       withBehavior:behavior];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _exchangeRateLabel.text = [NSString stringWithFormat:@"Курс за 1 %@ составляет %@₽", selectedCurrency, rateDecimalScale2];
+        [self.view setNeedsDisplay];
+
+    });
+    [self calculate];
+}
+
+
+    
+- (void)handleError:(NSError *)error
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Ошибка"
+                                                                   message:error.localizedDescription
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"ОК" style:UIAlertActionStyleCancel handler:NULL]];
+    
+    [self presentViewController:alert animated:YES completion:NULL];
+}
+
+
+
+- (void) calculate
+
+{
+    if (self.rubIsLeft == YES)
+    {
+        
+        resultDecimal = [inputValueDecimal decimalNumberByDividingBy:rateDecimal
+                                                        withBehavior:behavior];
+        
+    }
+    else
+    {
+        resultDecimal = [inputValueDecimal decimalNumberByMultiplyingBy:rateDecimal
+                                                           withBehavior:behavior];
+        
+    }
+    self.resultLabel.text = [resultDecimal stringValue];
+}
+
+
+
+
+
 #pragma mark - delegateMetods
 
 - (BOOL) textField: (UITextField *)textField
@@ -141,6 +198,9 @@ shouldChangeCharactersInRange: (NSRange)range
             if ([lastCharacter isEqualToString: @"."])
             {
                 self.lastDot = NO;
+                NSNumber *inputValue = [self conversion: [textField.text substringToIndex: [textField.text length]]];
+                inputValueDecimal = [NSDecimalNumber decimalNumberWithDecimal:[inputValue decimalValue]];
+                [self calculate];
             }
         }
         if ([string isEqualToString: @"."])
@@ -148,6 +208,7 @@ shouldChangeCharactersInRange: (NSRange)range
             if(self.lastDot == NO)
             {
                 self.lastDot = YES;
+            
                 return YES;
             }
             else
@@ -156,44 +217,17 @@ shouldChangeCharactersInRange: (NSRange)range
             }
         }
     }
-    if([textField.text length] > 0 && [string isEqualToString: @""]){
-        NSNumber *inputValue = [self conversion: [textField.text substringToIndex: [textField.text length]-1]];
-        float result;
-        if (self.rubIsLeft == YES)
-        {
-            result = inputValue.floatValue / kRate;
-            
-        }
-        else
-        {
-            result = inputValue.floatValue * kRate;
-        }
-        NSNumber *resultNumber = [NSNumber numberWithFloat: result];
-        self.resultLabel.text = [resultNumber stringValue];
-        return YES;
-    }
-    else
+  
+    if ([textField.text isEqualToString: @""] || [textField.text length] > 0)
     {
-        
-        NSNumber *inputValue = [self conversion: [textField.text stringByAppendingString: string]];
-        float result;
-        if (self.rubIsLeft == YES)
-        {
-            result = inputValue.floatValue / kRate;
-            
-        }
-        else
-        {
-            result = inputValue.floatValue * kRate;
-        }
-        NSNumber *resultNumber = [NSNumber numberWithFloat: result];
-        self.resultLabel.text = [resultNumber stringValue];
-        return YES;
-        
+        NSNumber *inputValue = [self conversion: [textField.text stringByAppendingString:string]];
+        inputValueDecimal = [NSDecimalNumber decimalNumberWithDecimal:[inputValue decimalValue]];
+        [self calculate];
     }
+     return YES;
 }
 
-
+     
 
 /*
 #pragma mark - Navigation
