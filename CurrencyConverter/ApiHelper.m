@@ -11,6 +11,8 @@
 #import "CurrencyModel.h"
 #import "AppContext.h"
 #import "CurrencyManager.h"
+#import "CurrencyModel.h"
+#import "CurrencyModel.h"
 
 
 @implementation ApiHelper
@@ -57,6 +59,11 @@
 {
     NSString * codeBase = [AppContext sharedAppContext].config.baseCurrency.code;
     NSArray *currencies = [AppContext sharedAppContext].Manager.currencies;
+    NSMutableArray *codeArray = [[NSMutableArray alloc] init];
+    for (CurrencyModel *) code in currencies
+    {
+        [codeArray addObject: CurrencyModel.code];
+    }
     NSURL *requestURL = [self createURLWithDate:selectedDate
                                     forCurrency:codeBase
                                  withCurrencies:currencies];
