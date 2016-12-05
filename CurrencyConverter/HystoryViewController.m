@@ -16,6 +16,7 @@
 
 
 
+
 @interface HystoryViewController () <MyTableViewControllerProtocol>
 
 @property (strong, nonatomic) HystoryDataSource *hystoryDataSourceProperty;
@@ -39,6 +40,7 @@
     self.hystoryDataSourceProperty = hystoryDataSource;
     self.Hystorytableview.dataSource = self.hystoryDataSourceProperty;
     self.Hystorytableview.delegate = self.hystoryDataSourceProperty;
+    self.hystoryDataSourceProperty.delegate = self;
 
     
 }

@@ -12,6 +12,8 @@
 @interface ModalViewController ()
 
 @property (nonatomic, strong) UIBarButtonItem *backButton;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end
 
@@ -22,11 +24,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    [self initNavigationItemLeftBarButtonItem];
-    
-}
 
 
 - (void)didReceiveMemoryWarning {
@@ -34,16 +31,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) initNavigationItemLeftBarButtonItem
-{
-    self.backButton = [[UIBarButtonItem alloc] initWithTitle: @"Назад"
-                                                       style: UIBarButtonItemStyleDone
-                                                      target: self
-                                                      action: @selector (backButtonClicked)];
-    self.navigationItem.rightBarButtonItem = self.backButton;
-}
-
-- (void) backButtonClicked
+- (IBAction)backButtonClicked:(id)sender
 {
     [self.delegate comeBackHystory];
 }
@@ -57,5 +45,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

@@ -11,8 +11,6 @@
 
 @interface ModalViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
 
 @property (weak, nonatomic) id <MyTableViewControllerProtocol> delegate;
 
