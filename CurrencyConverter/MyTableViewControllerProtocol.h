@@ -11,11 +11,11 @@
 @protocol MyTableViewControllerProtocol <NSObject>
 
 
-@required
+@optional
 
 -(void) didChangeCurrency: (NSString *) selectedCurrency;
 
-
+-(void) comeBackHystory;
 
 
 

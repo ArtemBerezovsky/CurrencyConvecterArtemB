@@ -16,7 +16,7 @@
 
 
 
-@interface HystoryViewController ()
+@interface HystoryViewController () <MyTableViewControllerProtocol>
 
 @property (strong, nonatomic) HystoryDataSource *hystoryDataSourceProperty;
 @property (weak, nonatomic) IBOutlet UITableView *Hystorytableview;
@@ -49,8 +49,11 @@
 }
 
 
+- (void) comeBackHystory
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 
-
+}
 
 
 /*

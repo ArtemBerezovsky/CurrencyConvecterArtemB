@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
 
+@property (weak, nonatomic) id <MyTableViewControllerProtocol> delegate;
+
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "ModalViewController.h"
+#import "HystoryCurrencyManager.h"
 
 @interface ModalViewController ()
+
+@property (nonatomic, strong) UIBarButtonItem *backButton;
 
 @end
 
@@ -22,6 +25,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) initNavigationItemLeftBarButtonItem
+{
+    self.backButton = [[UIBarButtonItem alloc] initWithTitle: @"Назад"
+                                                       style: UIBarButtonItemStyleDone
+                                                      target: self
+                                                      action: @selector (backButtonClicked)];
+    self.navigationItem.rightBarButtonItem = self.backButton;
+}
+
+- (void) backButtonClicked
+{
+    [self.delegate comebac];
+    
+    
 }
 
 /*
