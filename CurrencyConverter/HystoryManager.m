@@ -8,26 +8,26 @@
 
 #import "HystoryManager.h"
 
-static NSString *const day1 = @"1-11-2016";
-static NSString *const day2 = @"2-11-2016";
-static NSString *const day3 = @"3-11-2016";
-static NSString *const day4 = @"4-11-2016";
-static NSString *const day5 = @"5-11-2016";
-static NSString *const day6 = @"6-11-2016";
-static NSString *const day7 = @"7-11-2016";
-static NSString *const day8 = @"8-11-2016";
-static NSString *const day9 = @"9-11-2016";
-static NSString *const day10 = @"10-11-2016";
-static NSString *const day11 = @"11-11-2016";
-static NSString *const day12 = @"12-11-2016";
-static NSString *const day13 = @"13-11-2016";
-static NSString *const day14 = @"14-11-2016";
-static NSString *const day15 = @"15-11-2016";
-static NSString *const day16 = @"16-11-2016";
-static NSString *const day17 = @"17-11-2016";
-static NSString *const day18 = @"18-11-2016";
-static NSString *const day19 = @"19-11-2016";
-static NSString *const day20 = @"20-11-2016";
+static NSString *const day1 = @"2016-11-1";
+static NSString *const day2 = @"2016-11-2";
+static NSString *const day3 = @"2016-11-3";
+static NSString *const day4 = @"2016-11-4";
+static NSString *const day5 = @"2016-11-5";
+static NSString *const day6 = @"2016-11-6";
+static NSString *const day7 = @"2016-11-7";
+static NSString *const day8 = @"2016-11-8";
+static NSString *const day9 = @"2016-11-9";
+static NSString *const day10 = @"2016-11-10";
+static NSString *const day11 = @"2016-11-11";
+static NSString *const day12 = @"2016-11-12";
+static NSString *const day13 = @"2016-11-13";
+static NSString *const day14 = @"2016-11-14";
+static NSString *const day15 = @"2016-11-15";
+static NSString *const day16 = @"2016-11-16";
+static NSString *const day17 = @"2016-11-17";
+static NSString *const day18 = @"2016-11-18";
+static NSString *const day19 = @"2016-11-19";
+static NSString *const day20 = @"2016-11-20";
 
 @implementation HystoryManager
 

@@ -112,7 +112,7 @@
     else
     {
         
-        components.path = date;
+        components.path = [@"/" stringByAppendingString: date];;
     }
     NSDictionary *params = nil;
     if (currencyCodes == nil)
@@ -121,8 +121,9 @@
     }
     else
     {
+        NSString * result = [[currencyCodes valueForKey:@"description"] componentsJoinedByString:@","];
         params = @{[AppContext sharedAppContext].config.queryItemsBase : baseCurrencyCode,
-                   [AppContext sharedAppContext].config.symbolsMethod : currencyCodes};
+                   [AppContext sharedAppContext].config.symbolsMethod : result};
     }
     requestParams = [params copy];
     if (requestParams != nil)

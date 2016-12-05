@@ -52,11 +52,10 @@ static NSString * identifier = @"HystoryCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
- //[self presentViewController: (UIViewController *) viewController
- //withCompletion: (void)(^)(void) completionHandler]
+
     _selectedDate =hManager.dateArray[indexPath.row];
     [self.delegate openModelView:_selectedDate];
-    //modalViewController.titleLabel.text = _selectedDate;
+ 
 }
 
 

@@ -27,7 +27,7 @@
     self.titleLabel.text = self.selectedDateProperty;
     [[AppContext sharedAppContext].apiHelper loadAllRatesDateWithResponseHandler:^(NSDictionary * _Nonnull dict) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.titleLabel.text = [NSString stringWithFormat:@" %@ ", dict];
+            self.detailLabel.text = [NSString stringWithFormat:@" %@ ", dict];
             [self.view setNeedsDisplay];
             
         });
