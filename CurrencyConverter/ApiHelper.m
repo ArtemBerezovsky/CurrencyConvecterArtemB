@@ -60,13 +60,14 @@
     NSString * codeBase = [AppContext sharedAppContext].config.baseCurrency.code;
     NSArray *currencies = [AppContext sharedAppContext].Manager.currencies;
     NSMutableArray *codeArray = [[NSMutableArray alloc] init];
-    for (CurrencyModel *) code in currencies
+    for (CurrencyModel *objectCurrency in currencies)
     {
-        [codeArray addObject: CurrencyModel.code];
+        [codeArray addObject: objectCurrency.code];
     }
+    
     NSURL *requestURL = [self createURLWithDate:selectedDate
                                     forCurrency:codeBase
-                                 withCurrencies:currencies];
+                                 withCurrencies:codeArray];
     typeof(self) __weak weakSelf = self;
     dataTask = [session dataTaskWithURL:requestURL
                       completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
