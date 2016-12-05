@@ -13,5 +13,5 @@
 
 
 @property (weak, nonatomic) id <MyTableViewControllerProtocol> delegate;
-
+@property (strong,nonatomic) NSString *selectedDateProperty;
 @end

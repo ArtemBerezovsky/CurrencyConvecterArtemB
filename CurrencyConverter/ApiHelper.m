@@ -10,6 +10,8 @@
 #import "ApiConfig.h"
 #import "CurrencyModel.h"
 #import "AppContext.h"
+#import "CurrencyManager.h"
+
 
 @implementation ApiHelper
 
@@ -49,6 +51,29 @@
     [dataTask resume];
 }
 
+- (void) loadAllRatesDateWithResponseHandler: (void (^)( NSDictionary *dict))responseHandler
+                      withFailureHandler: (void (^)( NSError *error))failureHandler
+                                withDate: (NSString *) selectedDate
+{
+    NSString * codeBase = [AppContext sharedAppContext].config.baseCurrency.code;
+    NSArray *currencies = [AppContext sharedAppContext].Manager.currencies;
+    NSURL *requestURL = [self createURLWithDate:selectedDate
+                                    forCurrency:codeBase
+                                 withCurrencies:currencies];
+    typeof(self) __weak weakSelf = self;
+    dataTask = [session dataTaskWithURL:requestURL
+                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                          [weakSelf processData:data
+                                          error:error
+                            withResponseHandler:responseHandler
+                             withFailureHandler:failureHandler ];
+                      }];
+    
+    [dataTask resume];
+}
+
+
+
 
 
 - (NSURL *) createURLForAllCurrencies
@@ -66,7 +91,7 @@
                     withCurrencies: currenciesCodes];
 }
 
-- (NSURL *) createURLWithDate: (NSDate *) date
+- (NSURL *) createURLWithDate: (NSString *) date
                   forCurrency: (NSString *) baseCurrencyCode
                withCurrencies: (NSArray *) currencyCodes
 {
@@ -78,9 +103,8 @@
     }
     else
     {
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy-MM-dd"];
-        components.path = [formatter stringFromDate: date];
+        
+        components.path = date;
     }
     NSDictionary *params = nil;
     if (currencyCodes == nil)

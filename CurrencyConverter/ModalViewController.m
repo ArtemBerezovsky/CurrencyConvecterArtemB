@@ -8,6 +8,8 @@
 
 #import "ModalViewController.h"
 #import "HystoryCurrencyManager.h"
+#import "ApiHelper.h"
+#import "AppContext.h"
 
 @interface ModalViewController ()
 
@@ -22,6 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.titleLabel.text = self.selectedDateProperty;
+    [[AppContext sharedAppContext].apiHelper loadAllRatesDateWithResponseHandler:^(NSDictionary * _Nonnull dict) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.titleLabel.text = [NSString stringWithFormat:@" %@ ", dict];
+            [self.view setNeedsDisplay];
+            
+        });
+
+    }
+                                                              withFailureHandler:^(NSError * _Nonnull error) {
+                                                                  self.titleLabel.text = [NSString stringWithFormat:@"Ошибка загрузки"];
+                                                              }
+                                                                        withDate:self.selectedDateProperty];
 }
 
 

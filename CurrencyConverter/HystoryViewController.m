@@ -62,7 +62,10 @@
 - (void) openModelView:(NSString *)selectedDate
 {
     modalViewController = [[ModalViewController alloc]initWithNibName:nil bundle:nil];
+    modalViewController.selectedDateProperty = selectedDate;
+    modalViewController.delegate = self;
     [self presentViewController: modalViewController  animated: YES completion: nil];
+   
 }
 
 /*

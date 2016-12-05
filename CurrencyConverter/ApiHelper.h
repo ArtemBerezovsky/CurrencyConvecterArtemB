@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) loadAllRatesWithResponseHandler: (void (^)( NSDictionary *dict))responseHandler
                       withFailureHandler: (void (^)( NSError *error))failureHandler;
 
+- (void) loadAllRatesDateWithResponseHandler: (void (^)( NSDictionary *dict))responseHandler
+                          withFailureHandler: (void (^)( NSError *error))failureHandler
+                                    withDate: (NSString *) selectedDate;
 
 
 NS_ASSUME_NONNULL_END
