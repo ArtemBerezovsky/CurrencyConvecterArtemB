@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyTableViewControllerProtocol.h"
 
 @interface ModalViewController : UIViewController
 

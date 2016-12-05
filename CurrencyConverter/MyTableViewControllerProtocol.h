@@ -17,6 +17,6 @@
 
 -(void) comeBackHystory;
 
-
+-(void) openModelView: (NSString *) selectedDate;
 
 @end

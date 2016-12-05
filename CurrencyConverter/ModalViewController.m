@@ -22,6 +22,13 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self initNavigationItemLeftBarButtonItem];
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -38,9 +45,7 @@
 
 - (void) backButtonClicked
 {
-    [self.delegate comebac];
-    
-    
+    [self.delegate comeBackHystory];
 }
 
 /*

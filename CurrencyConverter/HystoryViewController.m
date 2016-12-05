@@ -25,7 +25,9 @@
 @end
 
 @implementation HystoryViewController
-
+{
+    ModalViewController * modalViewController;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,6 +57,11 @@
 
 }
 
+- (void) openModelView:(NSString *)selectedDate
+{
+    modalViewController = [[ModalViewController alloc]initWithNibName:nil bundle:nil];
+    [self presentViewController: modalViewController  animated: YES completion: nil];
+}
 
 /*
 #pragma mark - Navigation

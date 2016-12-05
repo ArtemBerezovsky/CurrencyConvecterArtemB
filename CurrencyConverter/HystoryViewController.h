@@ -13,5 +13,6 @@
 @interface HystoryViewController : UIViewController
 
 
+- (void) comeBackHystory;
 
 @end

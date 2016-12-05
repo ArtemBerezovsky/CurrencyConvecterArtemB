@@ -55,9 +55,7 @@ static NSString * identifier = @"HystoryCell";
  //[self presentViewController: (UIViewController *) viewController
  //withCompletion: (void)(^)(void) completionHandler]
     _selectedDate =hManager.dateArray[indexPath.row];
-    hystoryViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    modalViewController = [[ModalViewController alloc]initWithNibName:nil bundle:nil];
-    [self presentViewController: modalViewController  animated: YES completion: nil];
+    [self.delegate openModelView:_selectedDate];
     //modalViewController.titleLabel.text = _selectedDate;
 }
 
