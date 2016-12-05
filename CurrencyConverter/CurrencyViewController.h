@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
+#import "HystoryViewController.h"
 
 @class CurrencyModel;
 
-#pragma mark - constants
+#pragma mark - constants+
 
 static NSString *kRUB = @"RUB";
 static NSString *kUSD = @"USD";
@@ -19,8 +20,10 @@ static NSString *kGPB = @"GBP";
 static NSString *kAUD = @"AUD";
 
 
+
 @interface CurrencyViewController : UIViewController
 
+@property (strong,nonatomic) HystoryViewController *hystorytableProperty;
 
 @end
 

@@ -23,6 +23,13 @@
 }
 
 
+- (instancetype) init
+{
+   self =  [super init];
+    session = [NSURLSession sharedSession];
+    return self;
+}
+
 
 
 - (void) loadAllRatesWithResponseHandler: (void (^)( NSDictionary *dict))responseHandler

@@ -26,7 +26,8 @@
     self = [super init];
     [AppContext sharedAppContext].config = [[ApiConfig alloc]initWithConfigName:configName];
     [AppContext sharedAppContext].Manager = [[CurrencyManager alloc] init];
-    [AppContext sharedAppContext].apiHelper = [[ApiHelper alloc] init]
+    [AppContext sharedAppContext].apiHelper = [[ApiHelper alloc] init];
+    
     [self createWindow];
     return self;
 }

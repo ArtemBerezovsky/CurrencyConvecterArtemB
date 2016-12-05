@@ -9,7 +9,7 @@
 #import "CurrencyViewController.h"
 #import "MyTableViewControllerProtocol.h"
 #import "AppContext.h"
-
+#import "ApiHelper.h"
 
 #pragma mark - constants
 
@@ -18,7 +18,7 @@
 
 static NSString *kValueDefault = @"0";
 static NSString *const valueForTransferRate = @"1";
-
+static NSString *const kUSDCode = @"USD";
 
 
 @interface CurrencyViewController () <UITextFieldDelegate, MyTableViewControllerProtocol >
@@ -48,6 +48,8 @@ static NSString *const valueForTransferRate = @"1";
     self.rubIsLeft = YES;
     self.title = @"Обмен Валюты";
     self.valueTextField.delegate = self;
+    [self didChangeCurrency:kUSDCode];
+    
     
 
 }
@@ -67,6 +69,17 @@ static NSString *const valueForTransferRate = @"1";
     tablerate.delegate = self;
     [self.navigationController pushViewController: tablerate animated: YES];
 }
+
+- (IBAction)hystoryButtonClicked:(id)sender {
+    
+    
+    HystoryViewController *hystoryTable;
+    hystoryTable = [[HystoryViewController alloc] initWithNibName: nil bundle: nil];
+    _hystorytableProperty = hystoryTable;
+    [self.navigationController pushViewController: hystoryTable animated: YES];
+}
+
+
 
 
 
@@ -94,31 +107,6 @@ static NSString *const valueForTransferRate = @"1";
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *currency = [formatter numberFromString: inputText];
     return currency;
-}
-
-#pragma mark - MyTableViewControllerProtocol
-
-- (void) didChangeCurrency: (NSString *) selectedCurrency
-{
-    [self.navigationController popViewControllerAnimated: YES];
-    self.rightCurrency.text = selectedCurrency;
-    typeof(self) __weak weakSelf = self;
-
-
-    [ [AppContext sharedAppContext].apiHelper  loadAllRatesWithResponseHandler: ^(NSDictionary * _Nonnull dict)
-                                            {
-                                                [weakSelf updateRate:dict
-                                                    selectedCurrency: selectedCurrency];
-                                            }
-                               withFailureHandler: ^(NSError * _Nonnull error)
-                                            {
-                                                dispatch_async(dispatch_get_main_queue(), ^{
-                                                    [weakSelf handleError:error];
-                                                });
-                                            }];
-   
-
-  
 }
 
 
@@ -178,6 +166,35 @@ static NSString *const valueForTransferRate = @"1";
         
     }
     self.resultLabel.text = [resultDecimal stringValue];
+    
+}
+
+
+
+
+#pragma mark - MyTableViewControllerProtocol
+
+- (void) didChangeCurrency: (NSString *) selectedCurrency
+{
+    [self.navigationController popViewControllerAnimated: YES];
+    self.rightCurrency.text = selectedCurrency;
+    typeof(self) __weak weakSelf = self;
+    
+    
+    [ [AppContext sharedAppContext].apiHelper  loadAllRatesWithResponseHandler: ^(NSDictionary * _Nonnull dict)
+     {
+         [weakSelf updateRate:dict
+             selectedCurrency: selectedCurrency];
+     }
+                                                            withFailureHandler: ^(NSError * _Nonnull error)
+     {
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [weakSelf handleError:error];
+         });
+     }];
+    
+    
+    
 }
 
 

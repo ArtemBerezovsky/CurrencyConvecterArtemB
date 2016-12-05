@@ -25,11 +25,14 @@
 		5DE6F86D1DC65AD2001DC7A5 /* CurrencyConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F86C1DC65AD2001DC7A5 /* CurrencyConverterUITests.m */; };
 		5DE6F87C1DC65B8F001DC7A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE6F87B1DC65B8F001DC7A5 /* UIKit.framework */; };
 		5DE6F8801DC65FF5001DC7A5 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */; };
-		8432D78C1DF45BA600A24245 /* HIstoryCurrencyRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D78A1DF45BA500A24245 /* HIstoryCurrencyRates.m */; };
-		8432D78D1DF45BA600A24245 /* HIstoryCurrencyRates.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8432D78B1DF45BA500A24245 /* HIstoryCurrencyRates.xib */; };
-		8432D7901DF4607500A24245 /* HystoryCurrencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D78F1DF4607500A24245 /* HystoryCurrencyManager.m */; };
+		8432D7931DF46D2100A24245 /* HystoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D7921DF46D2100A24245 /* HystoryManager.m */; };
+		8432D7971DF46FF700A24245 /* HystoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D7951DF46FF700A24245 /* HystoryViewController.m */; };
+		8432D7981DF46FF700A24245 /* HystoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8432D7961DF46FF700A24245 /* HystoryViewController.xib */; };
+		8432D79B1DF473D300A24245 /* HystoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432D79A1DF473D300A24245 /* HystoryDataSource.m */; };
 		84404AAB1DEDAA6D002A6A07 /* ApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84404AAA1DEDAA6D002A6A07 /* ApiHelper.m */; };
 		84404AAD1DEDAC4A002A6A07 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84404AAC1DEDAC4A002A6A07 /* config.plist */; };
+		84E676E71DF58EE8005D6DF6 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E676E51DF58EE8005D6DF6 /* ModalViewController.m */; };
+		84E676E81DF58EE8005D6DF6 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E676E61DF58EE8005D6DF6 /* ModalViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,14 +88,19 @@
 		5DE6F87E1DC65FF5001DC7A5 /* CurrencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyViewController.h; sourceTree = "<group>"; };
 		5DE6F87F1DC65FF5001DC7A5 /* CurrencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyViewController.m; sourceTree = "<group>"; };
 		5DEDDEC21DCFAEEB005E2A02 /* MyTableViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewControllerProtocol.h; sourceTree = "<group>"; };
-		8432D7891DF45BA500A24245 /* HIstoryCurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIstoryCurrencyRates.h; sourceTree = "<group>"; };
-		8432D78A1DF45BA500A24245 /* HIstoryCurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIstoryCurrencyRates.m; sourceTree = "<group>"; };
-		8432D78B1DF45BA500A24245 /* HIstoryCurrencyRates.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HIstoryCurrencyRates.xib; sourceTree = "<group>"; };
-		8432D78E1DF4607500A24245 /* HystoryCurrencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HystoryCurrencyManager.h; sourceTree = "<group>"; };
-		8432D78F1DF4607500A24245 /* HystoryCurrencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HystoryCurrencyManager.m; sourceTree = "<group>"; };
+		8432D7911DF46D2100A24245 /* HystoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HystoryManager.h; sourceTree = "<group>"; };
+		8432D7921DF46D2100A24245 /* HystoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HystoryManager.m; sourceTree = "<group>"; };
+		8432D7941DF46FF700A24245 /* HystoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HystoryViewController.h; sourceTree = "<group>"; };
+		8432D7951DF46FF700A24245 /* HystoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HystoryViewController.m; sourceTree = "<group>"; };
+		8432D7961DF46FF700A24245 /* HystoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HystoryViewController.xib; sourceTree = "<group>"; };
+		8432D7991DF473D300A24245 /* HystoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HystoryDataSource.h; sourceTree = "<group>"; };
+		8432D79A1DF473D300A24245 /* HystoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HystoryDataSource.m; sourceTree = "<group>"; };
 		84404AA91DEDAA6D002A6A07 /* ApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiHelper.h; sourceTree = "<group>"; };
 		84404AAA1DEDAA6D002A6A07 /* ApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiHelper.m; sourceTree = "<group>"; };
 		84404AAC1DEDAC4A002A6A07 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		84E676E41DF58EE8005D6DF6 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		84E676E51DF58EE8005D6DF6 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		84E676E61DF58EE8005D6DF6 /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +144,6 @@
 			children = (
 				5D0AD2E51DD9277800A55AC3 /* CurrencyModel.h */,
 				5D0AD2E61DD9277800A55AC3 /* CurrencyModel.m */,
-				8432D78E1DF4607500A24245 /* HystoryCurrencyManager.h */,
-				8432D78F1DF4607500A24245 /* HystoryCurrencyManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -236,14 +242,21 @@
 				3FEC433E1DCDECC70020FBDB /* TableViewController.h */,
 				3FEC433F1DCDECC70020FBDB /* TableViewController.m */,
 				3FEC43401DCDECC70020FBDB /* TableViewController.xib */,
-				8432D7891DF45BA500A24245 /* HIstoryCurrencyRates.h */,
-				8432D78A1DF45BA500A24245 /* HIstoryCurrencyRates.m */,
-				8432D78B1DF45BA500A24245 /* HIstoryCurrencyRates.xib */,
+				8432D7941DF46FF700A24245 /* HystoryViewController.h */,
+				8432D7951DF46FF700A24245 /* HystoryViewController.m */,
+				8432D7961DF46FF700A24245 /* HystoryViewController.xib */,
 				5DEDDEC21DCFAEEB005E2A02 /* MyTableViewControllerProtocol.h */,
+				84E676E41DF58EE8005D6DF6 /* ModalViewController.h */,
+				84E676E51DF58EE8005D6DF6 /* ModalViewController.m */,
+				84E676E61DF58EE8005D6DF6 /* ModalViewController.xib */,
 				5D0AD2E81DD92D9800A55AC3 /* CurrencyManager.h */,
 				5D0AD2E91DD92D9800A55AC3 /* CurrencyManager.m */,
+				8432D7911DF46D2100A24245 /* HystoryManager.h */,
+				8432D7921DF46D2100A24245 /* HystoryManager.m */,
 				5D0AD2EB1DD9363200A55AC3 /* DataSource.h */,
 				5D0AD2EC1DD9363200A55AC3 /* DataSource.m */,
+				8432D7991DF473D300A24245 /* HystoryDataSource.h */,
+				8432D79A1DF473D300A24245 /* HystoryDataSource.m */,
 				5D90EADC1DCD4F7000323819 /* MyUITextField.h */,
 				5D90EADD1DCD4F7000323819 /* MyUITextField.m */,
 			);
@@ -357,9 +370,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE6F8571DC65AD1001DC7A5 /* LaunchScreen.storyboard in Resources */,
+				84E676E81DF58EE8005D6DF6 /* ModalViewController.xib in Resources */,
+				8432D7981DF46FF700A24245 /* HystoryViewController.xib in Resources */,
 				84404AAD1DEDAC4A002A6A07 /* config.plist in Resources */,
 				5DE6F8541DC65AD1001DC7A5 /* Assets.xcassets in Resources */,
-				8432D78D1DF45BA600A24245 /* HIstoryCurrencyRates.xib in Resources */,
 				3FEC43331DCDCF920020FBDB /* CurrencyViewController.xib in Resources */,
 				3FEC43421DCDECC70020FBDB /* TableViewController.xib in Resources */,
 			);
@@ -386,18 +400,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8432D7931DF46D2100A24245 /* HystoryManager.m in Sources */,
 				3F5A9F761DEC568A00374A0E /* ApiConfig.m in Sources */,
-				8432D78C1DF45BA600A24245 /* HIstoryCurrencyRates.m in Sources */,
 				5DE6F84C1DC65AD1001DC7A5 /* AppDelegate.m in Sources */,
 				3FEC43411DCDECC70020FBDB /* TableViewController.m in Sources */,
 				84404AAB1DEDAA6D002A6A07 /* ApiHelper.m in Sources */,
+				8432D7971DF46FF700A24245 /* HystoryViewController.m in Sources */,
 				5D0AD2ED1DD9363200A55AC3 /* DataSource.m in Sources */,
 				3F5A9F791DEC5C4400374A0E /* AppContext.m in Sources */,
 				5D0AD2E71DD9277800A55AC3 /* CurrencyModel.m in Sources */,
 				5DE6F8801DC65FF5001DC7A5 /* CurrencyViewController.m in Sources */,
 				5DE6F8491DC65AD1001DC7A5 /* main.m in Sources */,
 				5D5070DB1DDE622300395B09 /* RootWindow.m in Sources */,
-				8432D7901DF4607500A24245 /* HystoryCurrencyManager.m in Sources */,
+				84E676E71DF58EE8005D6DF6 /* ModalViewController.m in Sources */,
+				8432D79B1DF473D300A24245 /* HystoryDataSource.m in Sources */,
 				5D90EADE1DCD4F7000323819 /* MyUITextField.m in Sources */,
 				5D0AD2EA1DD92D9800A55AC3 /* CurrencyManager.m in Sources */,
 			);

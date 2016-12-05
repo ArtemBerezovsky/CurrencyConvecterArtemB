@@ -1,5 +1,5 @@
 //
-//  HIstoryCurrencyRates.h
+//  HstoryViewController.h
 //  CurrencyConverter
 //
 //  Created by Admin on 04/12/16.
@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyTableViewControllerProtocol.h"
 
-@interface HIstoryCurrencyRates : UIViewController
+
+@interface HystoryViewController : UIViewController
+
+
 
 @end

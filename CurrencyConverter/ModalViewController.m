@@ -1,18 +1,18 @@
 //
-//  HIstoryCurrencyRates.m
+//  ModalViewController.m
 //  CurrencyConverter
 //
-//  Created by Admin on 04/12/16.
+//  Created by Admin on 05/12/16.
 //  Copyright © 2016 ArtemBerezovskiy. All rights reserved.
 //
 
-#import "HIstoryCurrencyRates.h"
+#import "ModalViewController.h"
 
-@interface HIstoryCurrencyRates ()
+@interface ModalViewController ()
 
 @end
 
-@implementation HIstoryCurrencyRates
+@implementation ModalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"Select Currency";
+    self.title = @"Выбор валюты";
     CurrencyManager *currencyManager = [[CurrencyManager alloc]init];
     DataSource *dataSource = [[DataSource alloc] initWithCurrencyManager: currencyManager];
     self.dataSourceProperty = dataSource;
